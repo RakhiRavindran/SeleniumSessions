@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNG Regression Suite" verbose="4" thread-count="2" parallel="tests">
+
+	<test name="PElo Test">
+
+		<parameter name="url" value="https://secure.eloview.com/" />
+		<parameter name="browser" value="chrome" />
+
+
+		<classes>
+			<class name="testNGsessions.Pelo_Test" />
+		</classes>
+	</test>
+
+	<test name="PRedif Test">
+		<parameter name="url" value="https://mail.rediff.com/cgi-bin/login.cgi" />
+		<parameter name="browser" value="chrome" />
+
+
+		<classes>
+			<class name="testNGsessions.PRedif_Test" />
+		</classes>
+	</test>
+
+	
+
+</suite>
