@@ -29,13 +29,13 @@ public class ElementUtils {
 	public void  getElementsAttribute(By locator,String attrName) {
 		List<WebElement> eleList= getElements(locator);
 		for (WebElement e : eleList) {
-			String attrValue=e.getAttribute(attrName);
+			String attrValue=e.getDomAttribute(attrName);
 			System.out.println(attrValue);
 		}
 	}
 		
 	public String getElementAttribute(By locator,String attrName) {
-		return getElement(locator).getAttribute(attrName);
+		return getElement(locator).getDomAttribute(attrName);
 	}
 	
 

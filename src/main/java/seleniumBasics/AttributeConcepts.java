@@ -14,7 +14,12 @@ public class AttributeConcepts {
 		driver= new ChromeDriver();
 		driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/register");
 		
-		String fnAttValue=driver.findElement(By.name("firstname")).getAttribute("placeholder");
+		String fnAttValue=driver.findElement(By.name("firstname")).getDomAttribute("placeholder");
+		driver.findElement(By.name("firstname")).sendKeys("Arun");
+		String textValue=driver.findElement(By.name("firstname")).getDomProperty("value");
+		//getDomProperty("value") and getDomAttribute("Attribute name");
+		
+		System.out.println(textValue);
 		System.out.println(fnAttValue);
 		
 		By ln=By.id("input-lastname");

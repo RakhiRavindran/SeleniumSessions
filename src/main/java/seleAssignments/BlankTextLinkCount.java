@@ -15,7 +15,7 @@ public class BlankTextLinkCount {
 	public static void main(String[] args) {
 				
 		driver=new ChromeDriver();
-		driver.get("https://amazon.com/");
+		driver.get("https://www.flipkart.com/");
 		
 		By links=By.tagName("a");
 		List<String>textsList=getElementsTextList(links);

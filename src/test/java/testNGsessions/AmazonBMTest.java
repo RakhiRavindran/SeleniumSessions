@@ -30,7 +30,7 @@ public class AmazonBMTest {
 public void titleTest() {
 	String title = driver.getTitle();
 	System.out.println("page title:" + title);
-	Assert.assertEquals(title, "Amazon.com. Spend less. Smile more.");
+	Assert.assertEquals(title, "Amazon.com");
 }
 
 @Test(priority = 3)
@@ -41,7 +41,7 @@ public void searchExistTest() {
 
 @Test(priority = 2)
 public void isHelpExistTest() {
-	boolean flag = driver.findElement(By.linkText("Help1")).isDisplayed();
+	boolean flag = driver.findElement(By.linkText("Help")).isDisplayed();
 	Assert.assertTrue(flag);
 }
 
